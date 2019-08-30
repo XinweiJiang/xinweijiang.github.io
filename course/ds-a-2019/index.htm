@@ -1,0 +1,569 @@
+<title>Data Structure</title>
+<meta content="zh-cn" http-equiv="Content-Language">
+<meta content="text/html; charset=gb2312" http-equiv="Content-Type">
+<style>DIV.Section1 {
+	page: Section1
+}
+LI.MsoNormal {
+	MARGIN: 0pt; FONT-FAMILY: 宋体; FONT-SIZE: 12pt; mso-style-parent: ""
+}
+</style>
+<meta name="GENERATOR" content="MSHTML 9.00.8112.16447">
+<p align="left"><font size="4" face="Times New Roman">&nbsp;</font><b><font size="6" face="Times New Roman">Data Structure (</font><span lang="en-us"><font size="6"><span style="FONT-FAMILY: Times New Roman">Fall</span></font></span><span style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 24pt" lang="EN-US">-Winter
+</span><span lang="en-us"><font size="6"><span style="FONT-FAMILY: Times New Roman">2019-2020</span></font></span><font size="6" face="Times New Roman">)</font></b></p>
+<p align="left"><font size="4" face="Times New Roman"><a href="http://cs.cug.edu.cn/">School Of Computer Science</a></font></p>
+<p align="left"><font size="4" face="Times New Roman"><a href="http://www.cug.edu.cn/">China University of Geoscience</a></font></p>
+<hr>
+<p align="center"><font size="4" face="Times New Roman"><a href="#Announcements">Announcements</a>&nbsp;&nbsp;&nbsp;
+<a href="#General">General
+</a>&nbsp;&nbsp;&nbsp; <a href="#Course Goals">Course
+Goals</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+<a href="#Texts">Texts</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#Grading">Grading</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></p>
+<p align="center"><strong style="FONT-WEIGHT: 400"><font size="4" face="Times New Roman"><a href="#Syllabus">Syllabus</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#Assignments">Assignments</a><b>&nbsp;&nbsp;&nbsp;&nbsp;
+</b></font></strong><font size="4" face="Times New Roman"><a href="#Requirements on Assignments">Requirements
+on Assignments</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Professional Conduct">Professional
+Conduct</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#Miscellaneous">Miscellaneous</a></font></p>
+<hr>
+<p align="left"><b><font color="#ff0000" size="5" face="Times New Roman"><a name="Announcements"></a>Announcements</font></b></p>
+<ul style="MARGIN-BOTTOM: 0pt" type="disc">
+  <!--<li style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l10 level1 lfo1; tab-stops: list 36.0pt" class="MsoNormal"><font size="4"><span style="FONT-FAMILY: Times New Roman">Nov.
+  30: 课程结束，祝大家考试顺利！</span></font> </li>
+  
+  <li style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l10 level1 lfo1; tab-stops: list 36.0pt" class="MsoNormal"><font size="4"><span style="FONT-FAMILY: Times New Roman">Nov.
+  30: <a href="ds-ch10.pdf">Chapter 10：外部排序 PPT</a></span></font> </li>
+
+  <li style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l10 level1 lfo1; tab-stops: list 36.0pt" class="MsoNormal"><font size="4"><span style="FONT-FAMILY: Times New Roman">Nov.
+  25: <a href="ds-ch9.pdf">Chapter 9：内部排序 PPT</a></span></font> </li>
+  
+  <li style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l10 level1 lfo1; tab-stops: list 36.0pt" class="MsoNormal"><font size="4"><span style="FONT-FAMILY: Times New Roman">Nov.
+  16: <a href="ds-ch8.pdf">Chapter 8：图 PPT</a></span></font> </li>
+
+  <li style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l10 level1 lfo1; tab-stops: list 36.0pt" class="MsoNormal"><font size="4"><span style="FONT-FAMILY: Times New Roman">Nov.
+  12: <a href="ds-ch7.pdf">Chapter 7：搜索结构 PPT</a></span></font> </li>
+
+  <li style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l10 level1 lfo1; tab-stops: list 36.0pt" class="MsoNormal"><font size="4"><span style="FONT-FAMILY: Times New Roman">Oct.
+  27: <a href="ds-ch6.pdf">Chapter 6：集合与字典 PPT</a></span></font> </li>
+
+  <li style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l10 level1 lfo1; tab-stops: list 36.0pt" class="MsoNormal"><font size="4"><span style="FONT-FAMILY: Times New Roman">Oct.
+  17: The second project is released! Check the last slides of Chapter 5. The deadline is 2016.11.4.</span></font> </li>
+  
+  <li style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l10 level1 lfo1; tab-stops: list 36.0pt" class="MsoNormal"><font size="4"><span style="FONT-FAMILY: Times New Roman">Oct.
+  17: <a href="ds-ch5.pdf">Chapter 5：树和二叉树 PPT</a></span></font> </li>
+  
+  <li style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l10 level1 lfo1; tab-stops: list 36.0pt" class="MsoNormal"><font size="4"><span style="FONT-FAMILY: Times New Roman">Oct.
+  10: <a href="ds-ch4.pdf">Chapter 4：数组、串与广义表 PPT</a></span></font> </li>
+  
+  <li style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l10 level1 lfo1; tab-stops: list 36.0pt" class="MsoNormal"><font size="4"><span style="FONT-FAMILY: Times New Roman">Sep.
+  21: The first project is released! Check the last two slides of Chapter 3. The deadline is 2016.9.29.</span></font> </li>
+
+  <li style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l10 level1 lfo1; tab-stops: list 36.0pt" class="MsoNormal"><font size="4"><span style="FONT-FAMILY: Times New Roman">Sep.
+  21: <a href="ds-ch3.pdf">Chapter 3：栈和队列 PPT</a></span></font> </li>
+  
+  <li style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l10 level1 lfo1; tab-stops: list 36.0pt" class="MsoNormal"><font size="4"><span style="FONT-FAMILY: Times New Roman">Sep.
+  17: Deadline for submitting the 1st homework is 2016.9.26.</span></font> </li>
+
+  <li style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l10 level1 lfo1; tab-stops: list 36.0pt" class="MsoNormal"><font size="4"><span style="FONT-FAMILY: Times New Roman">Sep.
+  17: <a href="ds-ch2.pdf">Chapter 2：线性表 PPT</a></span></font> </li>
+
+  <li style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l10 level1 lfo1; tab-stops: list 36.0pt" class="MsoNormal"><font size="4"><span style="FONT-FAMILY: Times New Roman">Sep.
+  6: <a href="ds-ch1.pdf">Chapter 1：绪论 PPT</a></span></font> </li>
+  -->
+  <li style="mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-list: l10 level1 lfo1; tab-stops: list 36.0pt" class="MsoNormal"><span lang="en-us"><font size="4"><span style="FONT-FAMILY: Times New Roman">Sep. 1: The
+  website is open. </span></font></span></li>
+</ul>
+<hr>
+<p align="left"><b><font size="5" face="Times New Roman"><a name="General"></a>General<br>
+　</font></b></p>
+<table id="table2" border="0" width="89%">
+  <tbody>
+    <tr>
+      <td width="111"><b><font size="4" face="Times New Roman">Times</font></b></td>
+      <td style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <p class="MsoNormal"><span lang="en-us"><font size="4"><span style="FONT-FAMILY: Times New Roman">191155: Monday(16:25-18:00) &amp; Wednesday(16:25-18:00)</span></font></span>
+      <br>
+      <span style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 13.5pt">上机：TBA</span></p>
+      </td>
+      <td>　</td>
+    </tr>
+    <tr>
+      <td width="111"><b><font size="4" face="Times New Roman">Room</font></b></td>
+      <td style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 13.5pt" lang="EN-US">教二楼409</span></p>
+      </td>
+      <td>　</td>
+    </tr>
+    <tr>
+      <td width="111"><b><font size="4" face="Times New Roman">Instructor</font></b></td>
+      <td style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 13.5pt; mso-ansi-language: NL" lang="NL">Xinwei Jiang ( </span><span style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 13.5pt" lang="EN-US"><a href="mailto:ysjxw@qq.com"><span style="mso-ansi-language: NL" lang="NL">ysjxw@qq.com</span></a></span><span style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 13.5pt; mso-ansi-language: NL" lang="NL"> ) </span><span style="mso-ansi-language: NL" lang="NL"><o:p></o:p></span></p>
+      </td>
+      <td>　</td>
+    </tr>
+    <tr>
+      <td width="111"><b><font size="4" face="Times New Roman">TA</font></b></td>
+      <td style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <p class="MsoNormal"><font size="4"><span style="FONT-FAMILY: Times New Roman">TBA <a href="mailto:">(TBA</a>)</span></font></p>
+      </td>
+      <td>　</td>
+    </tr>
+    <tr>
+      <td width="111"><b><font size="4" face="Times New Roman">Credit</font></b></td>
+      <td style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <p class="MsoNormal"><span lang="en-us"><font size="4"><span style="FONT-FAMILY: Times New Roman">4</span></font></span></p>
+      </td>
+      <td>　</td>
+    </tr>
+    <tr>
+      <td width="111"><b><font size="4" face="Times New Roman">Prerequisite</font></b></td>
+      <td style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <p class="MsoNormal"><span style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 13.5pt" lang="EN-US">C/C++</span></p>
+      </td>
+      <td>　</td>
+    </tr>
+    <tr>
+      <td width="111">　</td>
+      <td style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <p class="MsoNormal">　</p>
+      </td>
+      <td>　</td>
+    </tr>
+    <tr>
+      <td width="111"><b><font size="4" face="Times New Roman">Webpage</font></b></td>
+      <td style="PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt">
+      <p class="MsoNormal"><font size="4" face="Times New Roman"><a href="http://www.xwjiang.com/course/ds">http://www.xwjiang.com/course/ds</a>
+      </font></p>
+      </td>
+      <td>　</td>
+    </tr>
+  </tbody>
+</table>
+<p>　</p>
+<hr>
+<h3><b><font size="5" face="Times New Roman"><a name="Course Goals"></a>Course
+Goals </font></b></h3>
+<p><font size="4" face="Times New Roman">The goals of this course are to extend
+and deepen the student's knowledge and understanding of algorithms and data
+structures and the associated design and analysis techniques. It examines
+previously studied algorithms and data structures more rigorously and introduces
+the student to "new" algorithms and data structures. It focuses the student's
+attention on the design of program structures that are correct, efficient in
+both time and space utilization, and defined in terms of appropriate
+abstractions. </font></p>
+<hr>
+<p align="left"><b><font size="5" face="Times New Roman"><a name="Texts"></a>Texts</font></b><font size="4" face="Times New Roman"><br>
+　</font></p>
+<p align="left"><font size="4" face="Times New Roman">Required
+textbook:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><span style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 13.5pt" lang="EN-US">C/C++</span><span style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 13.5pt">与</span><span style="FONT-SIZE: 13.5pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'">数据结构(用面向对象方法与C++语言描述)(第2版)，殷人昆主编，清华大学出版社
+</span><span style="FONT-FAMILY: 'Times New Roman'; FONT-SIZE: 13.5pt" lang="EN-US">,
+</span></p>
+<p align="left"><font size="4" face="Times New Roman">Optional
+textbook:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+数据结构（C++语言描述）,  朱战立编著，电子工业出版社.
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Data Structures, Algorithms, and Applications in C++, Sartaj Sahni, McGraw-Hill.
+（数据结构算法与应用——C++语言描述，机械工业出版社.）
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Any good
+introductory book on C++ programming.</font></p>
+<p align="left"><font size="4" face="Times New Roman">Readings:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://www.xuetangx.com/courses/TsinghuaX/30240184_2015X/2015_T1/courseware/a8c755dbb15b4bce9165d4df80f6485a/" target="_blank">清华大学数据结构MOOC</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.coursera.org/course/algs4partI" target="_blank">普林斯顿大学数据结构MOOC</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://visualgo.net" target="_blank">算法在线可视化http://visualgo.net</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="ds_visual.rar" target="_blank">数据结构演示软件</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://vdisk.weibo.com/s/ashWtIWuoABke" target="_blank">大话数据结构</a>
+　</font></p>
+<hr>
+<h3><b><font size="5" face="Times New Roman"><a name="Grading"></a>Grading
+</font></b></h3>
+<p><font size="4" face="Times New Roman">Credit toward the semester grade will be
+allocated to each of the components as indicated in the following table.
+</font></p>
+<center>
+<table id="table1" border="1">
+  <tbody>
+    <tr>
+      <td><font size="4" face="Times New Roman">Assignments </font></td>
+      <td><font size="4" face="Times New Roman">10% </font></td>
+    </tr>
+    <tr>
+      <td><font size="4" face="Times New Roman">Projects&nbsp; </font></td>
+      <td><font size="4" face="Times New Roman">30% </font></td>
+    </tr>
+    <tr>
+      <td><font size="4" face="Times New Roman">Final Exam </font></td>
+      <td><font size="4" face="Times New Roman">60%
+      </font></td>
+    </tr>
+  </tbody>
+</table>
+</center><font size="4" face="Times New Roman"><!--
+My grading scale is A [90..100], B [80..90), C [70..80), D [60..70),
+and F [0..60).
+--></font>
+<p><font size="4" face="Times New Roman">Note: Final examination will be in-class,
+closed-book. More information will be provided prior to it. </font></p>
+<strong>
+<hr>
+</strong><strong>
+<p><b><font size="5" face="Times New Roman"><a name="Syllabus"></a>Syllabus</font></b></p>
+</strong>
+<p><font size="4" face="Times New Roman"><b>Note:</b> Here you can view or
+download the notes that we use in class. DO NOT depend solely on these notes as
+many details are missing. You should read the textbook and take notes in class.
+</font></p>
+<ul>
+  <font size="4" face="Times New Roman">
+  <li><a href="ds-ch1.pdf">Chapter 1：绪论</a><br></li>
+  <li><a href="ds-ch2.pdf">Chapter 2：线性表</a><br></li>
+  <li><a href="ds-ch3.pdf">Chapter 3：栈和队列</a><br></li>
+  <li><a href="ds-ch4.pdf">Chapter 4：数组、串与广义表</a><br></li>
+  <li><a href="ds-ch5.pdf">Chapter 5：树</a><br></li>
+  <li><a href="ds-ch6.pdf">Chapter 6：集合与字典</a><br></li>
+  <li><a href="ds-ch7.pdf">Chapter 7：搜索结构</a><br></li>
+  <li><a href="ds-ch8.pdf">Chapter 8：图</a><br></li>
+  <li><a href="ds-ch9.pdf">Chapter 9：内部排序</a><br></li>
+  <li><a href="ds-ch10.pdf">Chapter 10：外部排序</a></li>
+  </font>
+  
+</ul>
+<p>　</p>
+<p></p>
+<p></p>
+<p></p>
+<p><b><font size="4" face="Times New Roman">Applets</font></b></p>
+<ul>
+  <li><a href="http://www.cosc.canterbury.ac.nz/people/mukundan/dsal/appldsal.html"><font size="4" face="Times New Roman">Java Applets by R. Mukundan </font></a>
+  </li>
+  <li><font size="4" face="Times New Roman">Sorting algorithms (<a href="http://www.cs.hope.edu/~alganim/animator/Animator.html">app1</a> (with
+  recursive mergesort), <a href="http://math.hws.edu/TMCM/java/xSortLab/index.html">app2</a> (with
+  iterative mergesort)) </font>
+  </li>
+  <li><font size="4" face="Times New Roman">Radix sort <a href="http://ciips.ee.uwa.edu.au/~morris/Year2/PLDS210/Java/radix_sort/">applet</a>
+  </font>
+  </li>
+  <li><font size="4" face="Times New Roman">Heap sort <a href="http://www.bridgeport.edu/~dichter/lilly/heapsort.htm">applet</a> [
+  click (1) start, (2) no, (3) ok, and (4) start] </font>
+  </li>
+  <li><font face="Times New Roman"><a href="http://www.cs.jhu.edu/~goodrich/dsa/trees/btree.html"><font size="4">Binary</font></a><font size="4"> tree <!--</li>
+  <li> AVL
+  <a
+  href="http://www.seanet.com/users/arsen/avltree.html">animation</a>
+  --></font></font>
+  </li>
+  <li><font size="4" face="Times New Roman">AVL <a href="http://www.cs.jhu.edu/~goodrich/dsa/trees/avltree.html">animation</a> <!--</li>
+  <li>
+  B+Tree <a --><!--href="http://www.cs.msstate.edu/~hwang/project/visualization.html">applet</a>
+  --></font>
+  </li>
+  <li><font size="4" face="Times New Roman">B+ tree <a href="http://www.seanster.com/BplusTree/BplusTree.html">animation</a> </font>
+  </li>
+  <li><font size="4" face="Times New Roman">Hash <a href="http://www.cs.yorku.ca/~aaw/Hang/hash/Hash.html">applet</a> </font>
+  </li>
+  <li><font face="Times New Roman"><a href="http://www.cs.duke.edu/csed/jawaa/DFSanim.html"><font size="4">Depth-first
+  search</font></a><font size="4"> </font></font>
+  </li>
+  <li><font face="Times New Roman"><a href="http://www.cs.duke.edu/csed/jawaa/BFSanim.html"><font size="4">Breadth-first search</font></a><font size="4"> </font></font>
+  </li>
+  <li><font size="4" face="Times New Roman">Many other <a href="http://www.cis.upenn.edu/~matuszek/cse121-2003/Pages/applets.html">applets</a>
+  </font></li>
+</ul>
+<strong>
+<hr>
+<p><b><font size="5" face="Times New Roman"><a name="Assignments"></a>Assignments</font></b></p>
+</strong>
+<p><b><font size="4" face="Times New Roman">Homework</font></b></p>
+<ul>
+<!--
+  <li><font size="4" face="Times New Roman"><a href="http://www.math.zju.edu.cn/ligangliu/Courses/DataStructure_2010-2011/Assignments/Homework_1.htm">Homework#1</a>,
+  deadline is <font color="#ff0000">9:30a.m., Wed., Mar. 16, 2011</font>.</font>
+  </li>
+  <li><font size="4" face="Times New Roman"><a href="http://www.math.zju.edu.cn/ligangliu/Courses/DataStructure_2010-2011/Assignments/Homework_2.htm">Homework#2</a>,
+  deadline is <font color="#ff0000">9:30a.m., Wed., Mar. 23, 2011</font>.</font>
+  </li>
+  <li><font size="4" face="Times New Roman"><a href="http://www.math.zju.edu.cn/ligangliu/Courses/DataStructure_2010-2011/Assignments/Homework_2.5.htm">Homework#2.5
+  (optional)</a>, deadline is <font color="#ff0000">9:30a.m., Wed., Mar. 30,
+  2011</font>.</font>
+  </li>
+  <li><font size="4" face="Times New Roman"><a href="http://www.math.zju.edu.cn/ligangliu/Courses/DataStructure_2010-2011/Assignments/Homework_3.htm">Homework#3</a>,
+  deadline is <font color="#ff0000">9:30a.m., Wed., April 27, 2011</font>. </font>
+  </li>
+  <li><font size="4" face="Times New Roman"><a href="http://www.math.zju.edu.cn/ligangliu/Courses/DataStructure_2010-2011/Assignments/Homework_4/Homework_4.htm">Homework#4</a>,
+  deadline is <font color="#ff0000">9:30a.m., Wed., May 18, 2011</font>. </font>
+  </li>
+  <li><font size="4" face="Times New Roman"><a href="http://www.math.zju.edu.cn/ligangliu/Courses/DataStructure_2010-2011/Assignments/Homework_5/Homework_5.htm">Homework#5</a>,
+  deadline is <font color="#ff0000">9:30a.m., Wed., June 15, 2011</font>.
+  </font></li>
+  -->
+</ul>
+<p></p>
+<p></p>
+<p><b><font size="4" face="Times New Roman">Projects (<a href="">Project
+requirement</a>)</font></b></p>
+<ul>
+<!--
+  <li><span lang="en-us"><font size="4"><span style="FONT-FAMILY: Times New Roman"><a href="http://www.math.zju.edu.cn/ligangliu/Courses/DataStructure_2010-2011/Assignments/Project_1/Project_1.htm">Project#1</a>,
+  deadline is </span></font></span><font size="4" face="Times New Roman"><font color="#ff0000">9:30a.m., Wed., April 27, 2011</font>.&nbsp; </font>
+  </li>
+  <li><font size="4" face="Times New Roman"><a href="http://www.math.zju.edu.cn/ligangliu/Courses/DataStructure_2010-2011/Assignments/Project_2/Project_2.htm">Project#2</a>,
+  deadline is <font color="#ff0000">9:30a.m., Wed. June 1, 2011.</font></font>
+  </li>-->
+</ul>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p><font size="4" face="Times New Roman">Note: Please zip your submission stuffs
+of the assignment into one single file either using WinZip or WinRAR. Name the
+file name as "ID_Name_Homework1.zip" or "ID_Name_Project1" where ID is your
+unique <a href="">ID
+number</a> in the class. For Example, my submission file name might be
+"007_张三_Homework1.zip".</font></p>
+<strong>
+<hr>
+</strong>
+<h3><font size="5" face="Times New Roman"><a name="Requirements on Assignments"></a>Requirements</font><b><font size="5" face="Times New Roman"> on Assignments</font></b><font size="4" face="Times New Roman"><br>
+　</font></h3>
+<h3><b><font size="4" face="Times New Roman">Requirements</font></b></h3>
+<ul>
+  <li><font size="4" face="Times New Roman">All students are expected to study the
+  relevant portions of the textbook and handouts in conjunction with our class
+  discussions (i.e., before coming to class). Explicit reading assignments will
+  not always be given.</font>
+  </li>
+  <li><font size="4" face="Times New Roman">All programming for this course will
+  be done in C++ according to <a href="http://www.math.zju.edu.cn/ligangliu/Courses/DataStructure_2010-2011/CodingStandard/CodingStyle.htm">the
+  coding styles</a>. We will compile and test programs on MS Visual C++ Version
+  6.0 under Windows XP. It is the responsibility of the student to submit a
+  program that will successfully compile and execute on the specified
+  platform.</font> </li>
+</ul>
+<p><font size="4" face="Times New Roman"><b>Assignment Submission</b></font></p>
+<ul>
+  <li><font size="4" face="Times New Roman">All students are expected to complete
+  their homework assignments by their due dates.</font><br>
+  <font size="4" face="Times New Roman">All assignments are due prior to 11:59:59 PM Wednesday
+  night every week. </font>
+  </li>
+  <li><font size="4" face="Times New Roman"><a name="SubmissionStuffs"></a>Submission stuffs<br>
+  Your <a href="">ID
+  number</a>, your name, the assignment number or name, source codes, related
+  document</font>
+  </li>
+  <li><font size="4" face="Times New Roman">Grading of programming assignments
+  will be based on the following criteria:<br>
+  1. Correctness of program.<br>
+  2.
+  Output from program that adequately demonstrates correctness. <br>
+  3.
+  Documentation, internal and external, included as appropriate according to
+  the</font><font size="4" face="Times New Roman"> <a href="http://www.math.zju.edu.cn/ligangliu/Courses/DataStructure_2010-2011/CodingStandard/DocumentStandards.htm">Computer
+  Program Documentation Standards</a>. <br>
+  4. Efficient use of algorithms and
+  appropriate data structures. <br>
+  5. Stress - program must function correctly
+  under all and/or extreme and unusual combinations of input. <br>
+  6. Creativity
+  - credit for innovation in interface, implementation, style, etc. </font>
+  </li>
+  <li><font size="4" face="Times New Roman">Submission approach<br>
+  Please submit
+  your assignment stuffs via my FTP not via email.</font>
+  </li>
+  <li><font size="4" face="Times New Roman">Late Work<br>
+  No late work will be
+  accepted. If you know you will miss a test due to an excused absence, you must
+  contact me ahead of time to schedule a make-up session. </font>
+  </li>
+  <li><font size="4" face="Times New Roman">Late programming assignments follow
+  the following rules: <br>
+  25% deduction for 1-day late <br>
+  50% deduction for
+  2-day late <br>
+  Not accepted after being 2-day late <br>
+  Regarding your marks,
+  contact the grading TA within two weeks after the assignment is handed back.
+  After this two-week period, your assignment stays as it is graded.
+  </font></li>
+</ul>
+<p><font size="4" face="Times New Roman"><b>What constitutes Creativity ?
+</b><br>
+<br>
+Creativity is any substantial improvement beyond the basic solution
+- it can be applied to any part of the project. For example, the following are
+relevant in most cases : </font></p>
+<ul>
+  <li><font size="4" face="Times New Roman">User Interaction
+  <br>
+  &nbsp;&nbsp;&nbsp; </font><font size="4" face="Tahoma">?&nbsp; </font><font size="4" face="Times New Roman">It would be nice to present the user with
+  options to either test the program using internal tests or an interactive
+  interface <br>
+  &nbsp;&nbsp;&nbsp; </font><font size="4" face="Tahoma">?&nbsp;
+  </font><font size="4" face="Times New Roman">Work around limitations in the
+  program. For example, if the program asks for lines of input and quits when it
+  sees "X", invent a special syntax (called an escape sequence) to allow the
+  user to type in "X" without the program exiting. Hypothetically, if the user
+  enters $X the program interprets it as X, if the user enters $ the program
+  interprets it as $ and if the user enters X the program exits. </font>
+  </li>
+  <li><font size="4" face="Times New Roman">Visualization <br>
+  &nbsp;&nbsp;&nbsp;
+  </font><font size="4" face="Tahoma">?&nbsp; </font><font size="4" face="Times New Roman">A representation of how data is actually being stored
+  in the data structure, by specific position and value (this would even help
+  greatly with debugging) - this could be accomplished with specialized data
+  access routines for output formatting </font>
+  </li>
+  <li><font size="4" face="Times New Roman">Testing <br>
+  &nbsp;&nbsp;&nbsp;
+  </font><font size="4" face="Tahoma">?&nbsp; </font><font size="4" face="Times New Roman">Simulating real-world conditions for input by making
+  some assumptions about the distribution of operations performed and the rate
+  of operations, then simulating using random number generators
+  <br>
+  &nbsp;&nbsp;&nbsp; </font><font size="4" face="Tahoma">?&nbsp; </font><font size="4" face="Times New Roman">Intensively testing creation, usage and
+  destruction of the data structure to prove there are no memory leaks
+  <br>
+  &nbsp;&nbsp;&nbsp; </font><font size="4" face="Tahoma">?&nbsp; </font><font size="4" face="Times New Roman">Exhaustive automatic testing - go through many
+  (or every) possible scenarios for the data structure (up to some time limit).
+  For example, assign "add" and "remove" to a binary variable - then generate
+  all possible strings of operations - test the structure for each case, and
+  test the results automatically in your main program to make sure they are what
+  was expected. <br>
+  &nbsp;&nbsp;&nbsp; </font><font size="4" face="Tahoma">?&nbsp;
+  </font><font size="4" face="Times New Roman">Develop a syntax for file-based
+  testing and use this as an option - eg. "enter X" and "retrieve" </font>
+  </li>
+  <li><font size="4" face="Times New Roman">Efficiency
+  <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; </font><font size="4" face="Tahoma">?&nbsp;
+  </font><font size="4" face="Times New Roman">Minimize the number of allocations
+  of memory blocks by reusing deleted blocks <br>
+  Ask yourself these questions
+  ... <br>
+  &nbsp;&nbsp;&nbsp; </font><font size="4" face="Tahoma">?&nbsp;
+  </font><font size="4" face="Times New Roman">How can I make the interface more
+  natural ? <br>
+  &nbsp;&nbsp;&nbsp; </font><font size="4" face="Tahoma">?&nbsp;
+  </font><font size="4" face="Times New Roman">How can I make the program run
+  faster ? <br>
+  &nbsp;&nbsp;&nbsp; </font><font size="4" face="Tahoma">?&nbsp;
+  </font><font size="4" face="Times New Roman">How can I use less memory/disk
+  space ? <br>
+  &nbsp;&nbsp;&nbsp; </font><font size="4" face="Tahoma">?&nbsp;
+  </font><font size="4" face="Times New Roman">Have I thoroughly tested my program
+  ? Will my program survive real-world tests ? Will my program survive
+  worst-case scenario tests ? </font></li>
+</ul>
+<hr>
+<p><b><font size="5" face="Times New Roman"><a name="Professional Conduct"></a>Professional Conduct </font></b></p>
+<p><font size="4" face="Times New Roman"><span style="FONT-WEIGHT: 400">As a
+student in our class, you are expected to conduct yourself in a professional
+manner. <br>
+<br>
+</span><span style="FONT-WEIGHT: 700">Limited Collaboration
+Policy.</span><span style="FONT-WEIGHT: 400"> Unless otherwise indicated, any
+homework assignment or programming exercise given in this class will be an
+individual assignment. The work you submit is to reflect the knowledge,
+understanding, and skill that you have attained as an individual. However, the
+instructor does want to encourage the development of a community of scholars who
+are actively engaged in discussion of the ideas related to this course. With
+this in mind, you are allowed to discuss solutions of the homework and
+programming problems with other students if done so according to the following
+guidelines: </span></font></p>
+<ul>
+  <li><font size="4" face="Times New Roman"><span style="FONT-WEIGHT: 400">You may
+  discuss ideas for homework and programming assignments with your classmates.
+  However, you cannot collaborate on writing the solution or the program code.
+  That is, you can talk about the problems and ideas for solving them, but you
+  cannot write things down with anyone else. You are, of course, prohibited from
+  copying or seeing another student's written solution, and you are not allowed
+  to show your work to anyone else. </span></font>
+  </li>
+  <li><font size="4" face="Times New Roman"><span style="FONT-WEIGHT: 400">You
+  should accept help with care. If you work too closely with another student,
+  you might mislead yourself into believing that you understand the concepts and
+  techniques better than you actually do. Don't forget that the instructor has
+  office hours and can probably give you hints or suggestions to get you
+  started. </span></font>
+  </li>
+  <li><font size="4" face="Times New Roman"><span style="FONT-WEIGHT: 400">You
+  should give help with care. Do not help anyone too much. When you have solved
+  a problem, it is tempting to just tell other students how you solved it.
+  Instead, try to allow them to come to the solution on their own. Maybe give
+  them a hint to help them get "over a hump." Remember that helping someone too
+  much will hurt them in the long term if they can't work through problems on
+  the exams by themselves. So avoid the temptation to do so. If you can't help
+  other students without giving away the whole solution, direct them to see the
+  instructor (who may or may not have a way to "edge" them toward the solution).
+  </span></font>
+  </li>
+  <li><font size="4" face="Times New Roman"><span style="FONT-WEIGHT: 400">You are
+  not obligated to help anyone. If you feel uncomfortable helping another
+  student for any reason, please direct them to see the instructor.
+  </span></font></li>
+</ul>
+<hr>
+<p><b><font size="5" face="Times New Roman"><a name="Miscellaneous"></a>Miscellaneous</font></b></p>
+<p><b><font size="4" face="Times New Roman">Professionals</font></b></p>
+<ul>
+  <li><font size="4" face="Times New Roman"><a href="http://www.math.zju.edu.cn/ligangliu/Courses/DataStructure_2010-2011/CodingStandard/CodingStyle.htm">C++
+  coding styles</a></font>
+  </li>
+  <li><font size="4" face="Times New Roman"><a href="http://www.math.zju.edu.cn/ligangliu/Courses/DataStructure_2010-2011/CodingStandard/DocumentStandards.htm">Computer
+  Program Documentation Standards</a></font> </li>
+</ul>
+<p><b><font size="4" face="Times New Roman">Online C++ resources</font></b></p>
+<ul>
+  <li><span style="FONT-FAMILY: Tahoma"><span style="POSITION: absolute; FONT-FAMILY: Times New Roman; COLOR: red; TOP: 0.74em; LEFT: -3.72%; mso-special-format: bullet; mso-color-index: 6"><font size="4">n</font></span></span><a href="http://www.cplusplus.com/doc/tutorial/"><font size="4" face="Times New Roman">C++ language tutotial</font></a>
+  </li>
+  <li><a href="http://www.intap.net/~drw/cpp/index.htm"><font size="4" face="Times New Roman">C++ online tutorial</font></a>
+  </li>
+  <li><a href="http://www.cprogramming.com/tutorial.html"><font size="4" face="Times New Roman">Programming in C++</font></a>
+  </li>
+  <li><a href="http://www.glenmccl.com/tutor.htm"><font size="4" face="Times New Roman">C++ tutorials</font></a>
+  </li>
+  <li><font face="Times New Roman"><a href="http://mindview.net/Books/TICPP/ThinkingInCPP2e.html"><font size="4">Thinking in C++</font></a><font size="4"> (a good on-line C++
+  textbook)</font></font> </li>
+</ul>
+<p><b><font size="4" face="Times New Roman">Useful coding related sites on the
+internet</font></b></p>
+<p:colorscheme colors="#ffffff,#000000,#1c1c1c,#333399,#00e4a8,#ffcf01,#ff0000,#3333cc">
+<div v:shape="_x0000_s1026">
+<div style="mso-line-spacing: '100 20 0'; mso-margin-left-alt: 468; mso-char-wrap: 1; mso-kinsoku-overflow: 1" class="O1">
+<ul>
+  <li><span style="FONT-FAMILY: Tahoma; FONT-SIZE: 133%"><span style="POSITION: absolute; FONT-FAMILY: Wingdings; COLOR: red; FONT-SIZE: 55%; TOP: 0.74em; LEFT: -3.72%; mso-special-format: bullet; mso-color-index: 6">n</span></span><span style="FONT-WEIGHT: 400"><font size="4" face="Times New Roman">Codeguru:
+  <p:onmouseclick href="http://www.codeguru.com/" hyperlinktype="url"><a style="FONT-WEIGHT: 400" onclick="window.event.cancelBubble=true;" href="http://www.codeguru.com/" target="_parent">http://www.codeguru.com/</a>&nbsp; </p:onmouseclick>
+  </font></span>
+  </li>
+  <li><font size="4" face="Times New Roman"><span style="FONT-WEIGHT: 400">Codeproject:
+  <p:onmouseclick href="http://www.codeproject.com/" hyperlinktype="url"><a style="FONT-WEIGHT: 400" onclick="window.event.cancelBubble=true;" href="http://www.codeproject.com/" target="_parent">http://www.codeproject.com/</a>&nbsp;</p:onmouseclick>
+  </span></font>
+  </li>
+  <li><font size="4" face="Times New Roman"><span style="FONT-WEIGHT: 400">VC知识库：
+  <p:onmouseclick href="http://www.vckbase.com/" hyperlinktype="url"><a style="FONT-WEIGHT: 400" onclick="window.event.cancelBubble=true;" href="http://www.vckbase.com/" target="_parent">http://www.vckbase.com/</a>&nbsp;</p:onmouseclick>
+  </span></font>
+  </li>
+  <li><font size="4" face="Times New Roman"><span style="FONT-WEIGHT: 400">MSDN中文网站：
+  <p:onmouseclick href="http://www.microsoft.com/china/msdn/default.aspx" hyperlinktype="url"><a onclick="window.event.cancelBubble=true;" href="http://www.microsoft.com/china/msdn/default.aspx" target="_parent">http://www.microsoft.com/china/msdn/default.aspx</a>
+  </p:onmouseclick>
+  </span></font></li>
+</ul>
+</div>
+</div>
+<hr>
+<p align="left"><font size="4" face="Times New Roman">Send any comments or
+suggestions to Dr. <a href="http://www.xwjiang.com">Xinwei Jiang</a>, <a href="mailto:ysjxw@qq.com">ysjxw@qq.com</a>
+<br>
+Copyright ? 2015, Xinwei Jiang<br>
+　</font></p>
+</p:colorscheme>
