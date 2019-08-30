@@ -1,0 +1,57 @@
+BODY {
+	BACKGROUND-COLOR: #f0f0f0; FONT-FAMILY: arial,sans-serif
+}
+H1 {
+	MARGIN: 0px; FONT-SIZE: 35px
+}
+H2 {
+	FONT-SIZE: 22px
+}
+H3 {
+	FONT-STYLE: italic; COLOR: #0050a0
+}
+#box {
+	BORDER-BOTTOM: #d0d0d0 1px solid; BORDER-LEFT: #d0d0d0 1px solid; PADDING-BOTTOM: 20px; BACKGROUND-COLOR: #ffffff; MARGIN: 30px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; BORDER-TOP: #d0d0d0 1px solid; BORDER-RIGHT: #d0d0d0 1px solid; PADDING-TOP: 20px
+}
+HR {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BACKGROUND-COLOR: #d0d0d0; WIDTH: 100%; HEIGHT: 1px; COLOR: #f0f0f0; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+#profile {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 20px; PADDING-LEFT: 20px; WIDTH: 220px; PADDING-RIGHT: 20px; FONT-SIZE: 14px; VERTICAL-ALIGN: top; PADDING-TOP: 20px
+}
+#bodytxt {
+	PADDING-BOTTOM: 20px; PADDING-LEFT: 20px; WIDTH: 99%; PADDING-RIGHT: 20px; PADDING-TOP: 20px
+}
+#lastupdate {
+	TEXT-ALIGN: right; PADDING-RIGHT: 30px; COLOR: #202020; FONT-SIZE: 11px
+}
+TD#navbar {
+	VERTICAL-ALIGN: bottom; PADDING-RIGHT: 60px
+}
+TABLE#navigate {
+	FLOAT: right
+}
+TABLE.showimg {
+	TEXT-ALIGN: center; MARGIN-LEFT: auto; MARGIN-RIGHT: auto
+}
+TD.nav {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BORDER-RIGHT: #d0d0d0 1px solid; PADDING-TOP: 2px
+}
+TD.navlast {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 10px; PADDING-TOP: 2px
+}
+A IMG {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+A:link {
+	COLOR: #0000ff; TEXT-DECORATION: none
+}
+A:visited {
+	
+}
+A:hover {
+	COLOR: #0088ff
+}
+B.award {
+	COLOR: #800000
+}
